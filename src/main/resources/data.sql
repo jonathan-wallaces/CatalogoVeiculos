@@ -1,0 +1,5 @@
+INSERT INTO tb_endereco (bairro,cep,complemento,localidade,logradouro,uf) VALUES ('centro','17013-905','apartamento 1','bahia','rua a','bh')
+INSERT INTO tb_endereco (bairro,cep,complemento,localidade,logradouro,uf) VALUES ('Vila Santo Antônio','17013-905','','Bauru','Avenida Nações UnidasQuadra 17 Quadra 17','SP')
+INSERT INTO tb_endereco (bairro,cep,complemento,localidade,logradouro,uf) VALUES ('Jardim Helena','08090-284','(Ch Três Meninas)','São Paulo','Rua 03 de Outubro','SP')
+INSERT INTO tb_endereco (bairro,cep,complemento,localidade,logradouro,uf) VALUES ('Cantinho do Céu','04849-529','','São Paulo','Rua 13 de Maio','SP')
+INSERT INTO tb_endereco (bairro,cep,complemento,localidade,logradouro,uf) VALUES ('Maranhão','03089-035','','São Paulo','Travessa Francisco Joaquim Lopes','SP')

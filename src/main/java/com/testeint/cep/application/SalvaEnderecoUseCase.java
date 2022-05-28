@@ -27,8 +27,8 @@ public class SalvaEnderecoUseCase {
         enderecoPort.save(endereco);
 
         SimpleMailMessage email = new SimpleMailMessage();
-        email.setTo("wallace97@outlook.com");
-        email.setSubject("ESTE – CEP - Seleção DEV Java - Jonathan");
+        email.setTo("contato@integralys.com.br");
+        email.setSubject("TESTE – CEP - Seleção DEV Java - <Jonathan_Wallace>");
         email.setText(String.valueOf(endereco));
 
         enviarEmail.enviar(email);
