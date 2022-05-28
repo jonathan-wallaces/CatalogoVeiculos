@@ -9,22 +9,20 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class SalvaEnderecoUseCase {
+public class EditarEnderecoUseCase {
     private final EnderecoPort enderecoPort;
-    private final BuscaEndereco buscaEndereco;
     private final EnviarEmail enviarEmail;
 
-    public void execute(String cep){
-        Endereco end = buscaEndereco.buscaEnderecoPorCep(cep);
-        Endereco endereco = new Endereco(
-                end.getCep(),
-                end.getLogradouro(),
-                end.getComplemento(),
-                end.getBairro(),
-                end.getLocalidade(),
-                end.getUf()
-                );
+    public void execute(Long id,
+                        String logradouro,
+                        String complemento,
+                        String bairro,
+                        String localidade,
+                        String uf){
+        Endereco endereco = enderecoPort.findEnderecoById(id);
+        endereco.editaEndereco(logradouro, complemento, bairro, localidade, uf);
         enderecoPort.save(endereco);
+
 
         SimpleMailMessage email = new SimpleMailMessage();
         email.setTo("wallace97@outlook.com");

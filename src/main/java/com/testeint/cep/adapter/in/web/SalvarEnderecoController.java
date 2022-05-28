@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/endereco")
-public class SalvarCepController {
+public class SalvarEnderecoController {
     private final SalvaEnderecoUseCase salvaEnderecoUseCase;
 
     @PostMapping(path = "/{cep}")
@@ -17,4 +17,3 @@ public class SalvarCepController {
         salvaEnderecoUseCase.execute(cep);
     }
 }
-//https://edermfl.wordpress.com/2017/02/08/aprendendo-springboot-3-enviando-e-mail/

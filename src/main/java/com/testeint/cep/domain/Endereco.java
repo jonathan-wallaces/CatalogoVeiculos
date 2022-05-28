@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Endereco {
@@ -23,6 +23,14 @@ public class Endereco {
 
     public Endereco(String cep, String logradouro, String complemento, String bairro, String localidade, String uf) {
         this.cep = cep;
+        this.logradouro = logradouro;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.localidade = localidade;
+        this.uf = uf;
+    }
+
+    public void editaEndereco(String logradouro, String complemento, String bairro, String localidade, String uf) {
         this.logradouro = logradouro;
         this.complemento = complemento;
         this.bairro = bairro;
